@@ -31,6 +31,15 @@ public class FragmentOne extends Fragment {
 
         binding.myTextView.setText("데이터 바인딩 이용");
 
+        binding.okBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String title = binding.titleEdit.getText().toString();
+
+                getActivity().setTitle(title);
+            }
+        });
+
     }
 
     public void changeTextMsg(String inputMessage) {
