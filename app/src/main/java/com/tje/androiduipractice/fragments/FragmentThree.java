@@ -10,17 +10,17 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.tje.androiduipractice.R;
-import com.tje.androiduipractice.databinding.Fragment2Binding;
+import com.tje.androiduipractice.databinding.Fragment3Binding;
 
-public class FragmentTwo extends Fragment {
+public class FragmentThree extends Fragment {
 
-    Fragment2Binding binding;
+    Fragment3Binding binding;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_2, container, false);
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_3, container, false);
 
         return binding.getRoot();
     }
@@ -29,6 +29,6 @@ public class FragmentTwo extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        binding.descriptTxt.setText("연습문제");
+        binding.thirdTextView.setText("JAVA");
     }
 }
