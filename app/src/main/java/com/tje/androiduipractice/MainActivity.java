@@ -11,6 +11,7 @@ import android.view.View;
 
 import com.tje.androiduipractice.adapters.PagerAdapter;
 import com.tje.androiduipractice.databinding.ActivityMainBinding;
+import com.tje.androiduipractice.fragments.FragmentOne;
 import com.tje.androiduipractice.fragments.FragmentTwo;
 
 public class MainActivity extends BaseActivity {
@@ -120,6 +121,9 @@ public class MainActivity extends BaseActivity {
 //                2. 접근한 Fragment 에게 어떻게 작업을 시킬건지?
                 if (act.viewPager.getCurrentItem() == 0) {
 //                    currentFrag 가 FragmentOne 이다.
+
+                    ((FragmentOne) currentFrag).changeTextMsg(act.testEdit.getText().toString());
+
                 }
                 else if (act.viewPager.getCurrentItem() == 1) {
 //                    currentFrag 가 FragmentTwo 이다.
