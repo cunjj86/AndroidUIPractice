@@ -102,6 +102,19 @@ public class MainActivity extends BaseActivity {
             @Override
             public void onPageScrollStateChanged(int i) {
 
+//                버튼이 눌렸을때 하고싶은 일?
+
+//                1. 지금 보여지고 있는 Fragment에 접근
+//                 => 현재 작성중인 MainActivity에서?
+
+//                2. 접근한 Fragment 에게 어떻게 작업을 시킬건지?
+            }
+        });
+
+        act.okBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
             }
         });
 
