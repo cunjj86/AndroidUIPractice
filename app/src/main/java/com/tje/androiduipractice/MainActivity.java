@@ -103,18 +103,30 @@ public class MainActivity extends BaseActivity {
             @Override
             public void onPageScrollStateChanged(int i) {
 
-//                버튼이 눌렸을때 하고싶은 일?
-
-//                1. 지금 보여지고 있는 Fragment에 접근
-//                 => 현재 작성중인 MainActivity에서?
-
-//                2. 접근한 Fragment 에게 어떻게 작업을 시킬건지?
             }
         });
 
         act.okBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+//                버튼이 눌렸을때 하고싶은 일?
+
+//                1. 지금 보여지고 있는 Fragment에 접근
+//                 => 현재 작성중인 MainActivity에서?
+
+                Fragment currentFrag = pagerAdapter.getItem(act.viewPager.getCurrentItem());
+
+//                2. 접근한 Fragment 에게 어떻게 작업을 시킬건지?
+                if (act.viewPager.getCurrentItem() == 0) {
+//                    currentFrag 가 FragmentOne 이다.
+                }
+                else if (act.viewPager.getCurrentItem() == 1) {
+//                    currentFrag 가 FragmentTwo 이다.
+                }
+                else if (act.viewPager.getCurrentItem() == 2) {
+//                    currentFrag 가 FragmentThree 이다.
+                }
 
             }
         });
