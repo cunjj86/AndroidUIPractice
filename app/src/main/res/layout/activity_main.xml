@@ -8,35 +8,64 @@
         android:orientation="vertical"
         tools:context=".MainActivity">
 
-        <ScrollView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/changeFragOneBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="1번 프래그먼트"/>
+
+            <Button
+                android:id="@+id/changeFragTwoBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="2번 프래그먼트"/>
+
+            <Button
+                android:id="@+id/changeFragThreeBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="3번 프래그먼트"/>
+
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
                 <fragment
                     android:id="@+id/fragOne"
-                    android:layout_width="match_parent"
-                    android:layout_height="200dp"
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
                     class="com.tje.androiduipractice.fragments.FragmentOne" />
 
                 <fragment
                     android:id="@+id/fragTwo"
-                    android:layout_width="match_parent"
-                    android:layout_height="300dp"
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
                     class="com.tje.androiduipractice.fragments.FragmentTwo" />
 
                 <fragment
                     android:id="@+id/fragThree"
-                    android:layout_width="match_parent"
-                    android:layout_height="130dp"
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
                     class="com.tje.androiduipractice.fragments.FragmentThree" />
 
             </LinearLayout>
-        </ScrollView>
+
+        </HorizontalScrollView>
 
     </LinearLayout>
 </layout>
