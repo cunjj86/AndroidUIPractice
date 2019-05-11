@@ -5,9 +5,20 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
         tools:context=".MainActivity">
 
+        <fragment
+            android:id="@+id/fragOne"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            class="com.tje.androiduipractice.fragments.FragmentOne" />
 
+        <fragment
+            android:id="@+id/fragTwo"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            class="com.tje.androiduipractice.fragments.FragmentTwo" />
 
     </LinearLayout>
 </layout>
